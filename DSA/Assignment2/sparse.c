@@ -40,13 +40,15 @@ void create_new_node(struct Node** start, int non_zero_element,
 
 void PrintList(struct Node* start, int n)
 {
-	struct Node *temp = start;
+	struct Node *temp;
 	int i = 1, j = 1;
 	for(i;i<=n;i++) {
 		for(j;j<=n;j++) {
+			temp = start;
 			while(temp != NULL) {
 			if ((temp->row_position == i)&&(temp->column_postion == j)) {
 				printf("%d ", temp->value);
+				//continue;
 			} 
 			else {
 				temp = temp->next;
