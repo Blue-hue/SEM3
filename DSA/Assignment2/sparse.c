@@ -41,21 +41,21 @@ void create_new_node(struct Node** start, int non_zero_element,
 void PrintList(struct Node* start, int n)
 {
 	struct Node *temp;
-	int i = 1, j = 1;
-	for(i;i<=n;i++) {
-		for(j;j<=n;j++) {
+	int i, j;
+	for(i=1;i<=n;i++) {
+		for(j=1;j<=n;j++) {
 			temp = start;
 			while(temp != NULL) {
 			if ((temp->row_position == i)&&(temp->column_postion == j)) {
-				printf("%d ", temp->value);
-				//continue;
+				printf("%3d ", temp->value);
+				break;
 			} 
 			else {
 				temp = temp->next;
 			}
 		}
 		if (temp == NULL) {
-			printf("0 ");
+			printf("  0");
 		}
 	}
 	printf("\n");
