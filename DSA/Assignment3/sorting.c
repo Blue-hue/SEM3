@@ -93,7 +93,6 @@ void quickSort(int *A, int n, int low, int high){
         partitionIndex = partition(A, low, high);
         printf("Pass %d : ", i++);
         printArray(A,n);
-        //printArray(A, n); 
         quickSort(A, n, low, partitionIndex - 1);
         quickSort(A, n, partitionIndex + 1, high);
     }
